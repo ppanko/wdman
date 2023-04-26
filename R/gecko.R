@@ -141,7 +141,7 @@ gecko_ver <- function(platform, version) {
     file.path(app_dir("geckodriver"), platform, geckover)
   )
   geckopath <- list.files(geckodir,
-    pattern = "geckodriver($|.exe$)",
+    pattern = "geckodriver(.*.$|.exe$)",
     full.names = TRUE
   )
   list(version = geckover, dir = geckodir, path = geckopath)
